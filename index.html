@@ -14,8 +14,8 @@
 
   <div>
     <!-- Navigation -->
-    <nav class="bg-dark ">
-
+    <nav class="page-title">
+      <h1 class="title-center"> Weather Dashboard </h1>
     </nav>
 
     <!-- Main Container -->
@@ -23,7 +23,15 @@
 
       <!-- Search for a city -->
       <div id="search-section">
-
+        <div class="card-body">
+          <h5>Search for a City: </h5>
+          <form class="form-inline">
+            <input type="search" placeholder="Enter city name" class="form-control mr-sm-2 input" />
+            <button class="btn btn-primary"  type="submit">
+              <i class="fas fa-search-location"></i>
+            </button>
+          </form>
+        </div>
       </div>
 
       <!-- Container for weather columns -->
