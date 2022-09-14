@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+};
+
+/* Header */
+nav {
+  color: white;
+}
+
+.page-title {
+  margin-top: 20px;
+  color: white;
+  background-image: linear-gradient(to right,blue ,black);
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.title-center {
+  text-align: center;
+  font-weight: bold;
+}
+
+#search-section {
+  background-color: lightskyblue
+}
