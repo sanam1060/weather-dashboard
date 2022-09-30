@@ -1,11 +1,18 @@
 // API key
 var apiKey = '&appid=97f0f5d6cfc879233ba18c2c19e54d40'
 
+//DOM Elements
 var inputEl = document.querySelector('.input');
 var searchBtnEl = document.querySelector('.search-button');
 var citiesListEl = document.querySelector(".cities-list");
+
+//Sets the cityName in localStorage
 var cityName = localStorage.getItem("cityNameStore");
+
+//URL for current day parameteres
 var URLWeather ="https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial" + apiKey;
+
+//URL for forecast parameters
 var URLForecast ="https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + "&units=imperial" + apiKey;
 
 function recordCityData() {
@@ -39,7 +46,7 @@ $.ajax({
   var lon = response.coord.lon;
   var queryURLUv = "https://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + apiKey;
 
-  // Uv Index function
+  // UV Index function
   $.ajax({
     url: queryURLUv,
     method: "GET",
@@ -56,15 +63,15 @@ $.ajax({
 
 // Index color function
 function uvColor(uvValue, colorbgd) {
-  var colorbgd = "yellow";
+  var colorbgd = "";
   if (uvValue <= 2) {
-    colorbgd = "";
+    colorbgd = "ffbb00";
   }
   else if (uvValue <= 5 && uvValue > 2) {
-    colorbgd = "#yellow";
+    colorbgd = "#ffbb00";
     }
     else if (uvValue >= 6 && uvValue > 5) {
-        colorbgd = "#red";
+        colorbgd = "#FF0000";
     }
     return colorbgd;
 }
