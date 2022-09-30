@@ -6,6 +6,8 @@
 /* Header */
 nav {
   color: white;
+  font-size: 46px;
+  text-align: center;
 }
 
 .page-title {
@@ -23,4 +25,32 @@ nav {
 
 #search-section {
   background-color: lightskyblue
+}
+
+.city {
+  border: none;
+}
+
+.card-city {
+  border: none;
+}
+ 
+.main-container {
+ padding-bottom: 20px;
+}
+
+.row-blue {
+  background-color: teal;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: large;
+}
+
+.row-blue h5 {
+  font-size: larger;
+  font-weight: bold;
+  margin-left: 15px;
 }

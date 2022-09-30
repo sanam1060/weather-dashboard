@@ -6,67 +6,130 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- CSS -->
   <link rel="stylesheet" href="./assets/css/style.css" />
   <title>Weather Dashboard</title>
 </head>
 
 <body>
 
-  <div>
     <!-- Navigation -->
     <nav class="page-title">
       <h1 class="title-center"> Weather Dashboard </h1>
     </nav>
 
     <!-- Main Container -->
-    <div class="container-fluid">
+    <div class="main-container container-fluid">
+      <div class="row">
 
       <!-- Search for a city -->
-      <div id="search-section">
+      <div id="search-section" class="col-md-4">
         <div class="card-body">
-          <h5>Search for a City: </h5>
+          <h5>Search for a city: </h5>
           <form class="form-inline">
             <input type="search" placeholder="Enter city name" class="form-control mr-sm-2 input" />
-            <button class="btn btn-primary"  type="submit">
+            <button class="btn btn-primary my-2 my-sm-0 search search-button" type="submit">
               <i class="fas fa-search-location"></i>
             </button>
           </form>
-        </div>
+        <div class="cities-list"></div>
       </div>
+    </div>
 
       <!-- Container for weather columns -->
-      <div>
+      <div class="col-md-8 container-left-columns">
 
         <!-- Current city -->
         <div class="row">
-          <div class="card city">
+          <div class="card card-city">
             <div class="card-body">
-              <p class="city-date">City/Date<span class="weather-icon">Weather-icon</span></p>
-              <p class="temperature">Temperature</p>
-              <p class="humidity">Hunidity</p>
-              <p class="wind">Wind Speed</p>
-              <p class="uv">UV Index: <span class="span-number">number</span></p>
+              <p class="current-date"></p>
+              <p class="city"></p>
+              <p class="weather-icon"></p>
+              <p class="temperature"></p>
+              <p class="humidity"></p>
+              <p class="wind"></p>
+              <p class="uv"></p>
             </div>
           </div>
-
         </div>
         
-        <!--5 Day Forecast-->
+        <!--5 Day Forecast Title -->
+        <div class="row-blue">
         <div class="row">
-          <div class="forecast">
+          <div class="forecast-title">
+            <div class="cdforecast">
             <h5>5-Day Forecast</h5>
+            </div>
           </div>
         </div>
 
-        <div class="row">
+        <!-- 5 Day Forecast Days -->
+        <div class="row gutters">
 
+          <!-- Day 1-->
+          <div class="col">
+            <div class="card forecast-day">
+              <div class="card-body bg-primary">
+                <p class="day-one-date"></p>
+                <p class="day-one-icon"></p>
+                <p class="day-one-temperature"></p>
+                <p class="day-one-humidity"></p>
+              </div>
+            </div>
+          </div>
+          
+          <!--Day 2-->
+          <div class="col">
+            <div class="card forecast">
+              <div class="card-body bg-primary">
+                <p class="day-two-date"></p>
+                <p class="day-two-icon"></p>
+                <p class="day-two-temperature"></p>
+                <p class="day-two-humidity"></p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Day 3-->
+          <div class="col">
+            <div class="card forecast">
+              <div class="card-body bg-primary">
+                <p class="day-three-date"></p>
+                <p class="day-three-icon"></p>
+                <p class="day-three-temperature"></p>
+                <p class="day-three-humidity"></p>
+              </div>
+            </div>
+          </div>
+          
+          <!--Day 4-->
+          <div class="col">
+            <div class="card forecast">
+              <div class="card-body bg-primary">
+                <p class="day-four-date"></p>
+                <p class="day-four-icon"></p>
+                <p class="day-four-temperature"></p>
+                <p class="day-four-humidity"></p>
+              </div>
+            </div>
+          </div>
+          
+          <!--Day 5-->
+          <div class="col">
+            <div class="card forecast">
+              <div class="card-body bg-primary">
+                <p class="day-five-date"></p>
+                <p class="day-five-icon"></p>
+                <p class="day-five-temperature"></p>
+                <p class="day-five-humidity"></p>
+              </div>
+            </div>
+          </div>
+        
         </div>
 
-      </div>
-
     </div>
-
-  </div>
 
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
